@@ -3,13 +3,13 @@ import java.util.Objects;
 
 public class Livro extends Doacao{
     private String nomeDoLivro;
-    private String nomeDoAltor;
+    private String Altor;
     private String tipoDoLivro;
 
     public Livro(String estadoDeComservacao, double preco, String nomeDoLivro, String nomeDoAltor, String tipoDoLivro){
         super(estadoDeComservacao, preco);
         this.nomeDoLivro = nomeDoLivro;
-        this.nomeDoAltor = nomeDoAltor;
+        this.Altor = nomeDoAltor;
         this.tipoDoLivro = tipoDoLivro;
     }
     public Livro(){
@@ -23,11 +23,11 @@ public class Livro extends Doacao{
     public void setNomeDoLivro(String nomeDoLivro) {
         this.nomeDoLivro = nomeDoLivro;
     }
-    public String getNomeDoAltor(){
-        return nomeDoAltor;
+    public String getAltor(){
+        return Altor;
     }
-    public void setNomeDoAltor(String nomeDoAltor){
-        this.nomeDoAltor = nomeDoAltor;
+    public void setAltor(String altor){
+        this.Altor = altor;
     }
 
     public String getTipoDoLivro() {
@@ -40,12 +40,12 @@ public class Livro extends Doacao{
 
     @Override
     public int hashCode() {
-        return Objects.hash(nomeDoLivro, nomeDoAltor, tipoDoLivro);
+        return Objects.hash(nomeDoLivro, Altor, tipoDoLivro);
     }
 
     @Override
     public String toString() {
-        return "Livro: "+nomeDoLivro+"\nAltor: "+nomeDoAltor+"\nGenero: "+tipoDoLivro+"\nPreço: ";
+        return "Livro: "+nomeDoLivro+"\nAltor: "+ Altor +"\nGenero: "+tipoDoLivro+"\nPreço: ";
 
     }
 }
